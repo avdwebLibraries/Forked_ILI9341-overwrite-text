@@ -1,8 +1,6 @@
-#include "Arduino.h"
+#include <Arduino.h>
 #include <Wire.h>
 #include "Adafruit_ILI9341_Albert.h"
-//#include "Adafruit_GFX.h" // https://github.com/adafruit/Adafruit-GFX-Library
-//#include "Adafruit_ILI9341.h" // 240x320 https://github.com/adafruit/Adafruit_ILI9341
 #include <Fonts/FreeSans12pt7b.h> // https://learn.adafruit.com/adafruit-gfx-graphics-library/using-fonts
 #include <Fonts/FreeSans24pt7b.h> 
 
@@ -11,6 +9,12 @@ const byte TFT_CS = A1;
 const byte TFT_RST = A0;
 
 Adafruit_ILI9341_Albert tft = Adafruit_ILI9341_Albert(TFT_CS, TFT_DC, TFT_RST);
+
+/* Add these libraries in the correct library folder:
+Adafruit_ILI9341_Albert
+Adafruit_GFX.h" // https://github.com/adafruit/Adafruit-GFX-Library
+Adafruit_ILI9341.h" // 240x320 https://github.com/adafruit/Adafruit_ILI9341
+*/
 
 void setup() 
 { Wire.begin();  // join I2C bus
