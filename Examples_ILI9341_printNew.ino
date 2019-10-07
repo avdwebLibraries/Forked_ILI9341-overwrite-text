@@ -25,7 +25,15 @@ void setup()
 void loop()
 { tft.fillScreen(ILI9341_BLACK); 
   tft.setTextColor(ILI9341_WHITE, ILI9341_BLACK); 
+  // Intro
+  tft.setFont(&FreeSans12pt7b);
+  tft.setCursor(0, 40); 
+  tft.println("Overwriting text on ILI9341\n\nOverwrite text correctly\nwith printNew()");
+  delay(2000);
+  tft.fillScreen(ILI9341_BLACK); 
+  tft.setCursor(0, 40); 
   // String with standard font
+  tft.setFont();
   tft.setCursor(0, 40); 
   tft.setTextSize(2);
   tft.print("Write over standard font");
@@ -43,6 +51,14 @@ void loop()
   tft.setCursor(0, 40); 
   tft.printNew("New text", "Write over FreeSans12pt7b");
   delay(1000);
+  // Overwriting numbers
+  tft.fillScreen(ILI9341_BLACK); 
+  tft.setFont(&FreeSans12pt7b);
+  tft.setCursor(0, 40); 
+  tft.println("Overwriting numbers");
+  delay(2000);
+  tft.fillScreen(ILI9341_BLACK); 
+  tft.setCursor(0, 40); 
   // Number with standard font
   tft.setFont();
   tft.setTextSize(2);
