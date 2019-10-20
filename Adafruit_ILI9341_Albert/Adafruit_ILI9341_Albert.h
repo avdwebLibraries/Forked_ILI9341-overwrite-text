@@ -1,7 +1,7 @@
 #ifndef Adafruit_ILI9341_Albert_H
 #define Adafruit_ILI9341_Albert_H
 
-#include "Adafruit_ILI9341.h"
+#include "Adafruit_ILI9341.h" // https://github.com/adafruit/Adafruit_ILI9341
 
 class Adafruit_ILI9341_Albert: public Adafruit_ILI9341
 { 
