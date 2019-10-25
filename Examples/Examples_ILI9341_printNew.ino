@@ -85,6 +85,12 @@ void loop()
   tft.setCursor(0, 40); 
   tft.println("Blue BG");
   test();
+  // Float 
+  tft.fillScreen(ILI9341_BLACK); 
+  tft.setTextColor(ILI9341_WHITE, ILI9341_BLACK); // ILI9341_BLACK needed, else background is white
+  tft.setCursor(0, 40); 
+  tft.println("Float");
+  testFloat();
   tft.setFont();
 }
 
@@ -94,6 +100,16 @@ void test()
     delay(500);
     tft.printNew(i, 3); // max number is 100
   }
+}
+
+void testFloat()
+{ tft.setCursor(0, 90); 
+  tft.printNew(333.3333, 1, 5); 
+  delay(500);
+  tft.printNew(-3.3333, 2, 5); 
+  delay(500);
+  tft.printNew(-0.1111, 1, 5); 
+  delay(500);
 }
 
 
